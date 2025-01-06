@@ -1,1 +1,171 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Video Stream</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        #video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        video {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+            object-fit: contain; /* Ensures the aspect ratio is maintained */
+        }
+
+        #movie-title {
+            position: absolute;
+            top: 15%;
+            right: 2%;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            z-index: 1;
+            pointer-events: none;
+            display: none;
+        }
+
+        #loading-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 16px;
+            display: none;
+        }
+
+        #time-display {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            font-size: 20px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="display: none;">Qodegen Media</h1>
+    <div id="video-container">
+        <video id="video" autoplay muted></video>
+        <div id="movie-title">Saripodhaa Sanivaaram</div>
+        <div id="loading-indicator">Loading...</div>
+    </div>
+
+    <!-- Display the current local time -->
+    <div id="time-display"></div>
+
+    <script>
+        const video = document.getElementById('video');
+        const m3u8Url = 'https://pothabattulavinod.github.io/m/1.m3u8';
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const movieTitle = document.getElementById('movie-title');
+        const videoContainer = document.getElementById('video-container');
+        const timeDisplay = document.getElementById('time-display');
+
+        // Function to update local time instantly
+        function updateLocalTime() {
+            const currentTime = new Date().toLocaleTimeString();
+            timeDisplay.textContent = `Local Time: ${currentTime}`;
+        }
+
+        // Update the local time every second
+        setInterval(updateLocalTime, 1000);
+
+        // Function to clear local storage and update instantly
+        function clearLocalStorageAndUpdate() {
+            localStorage.clear(); // Clears the local storage
+            console.log('LocalStorage cleared at', new Date().toLocaleTimeString());
+        }
+
+        // Call the function to clear local storage as soon as the page loads
+        clearLocalStorageAndUpdate();
+
+        function showLoading() {
+            loadingIndicator.style.display = 'block';
+        }
+
+        function hideLoading() {
+            loadingIndicator.style.display = 'none';
+        }
+
+        function getPredefinedStartTime() {
+            const startTime = new Date();
+            startTime.setHours(0, 0, 0, 0);
+            return startTime;
+        }
+
+        function loadStream(url, startTimeOffset) {
+            showLoading();
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(url);
+                hls.attachMedia(video);
+
+                hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                    video.currentTime = startTimeOffset;
+                    video.muted = false;
+                    video.play();
+                    hideLoading();
+                });
+
+                hls.on(Hls.Events.ERROR, function (event, data) {
+                    hideLoading();
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = url;
+                video.currentTime = startTimeOffset;
+                video.muted = false;
+                video.play();
+                hideLoading();
+            } else {
+                hideLoading();
+            }
+        }
+
+        function syncWithStartTime() {
+            const startTime = getPredefinedStartTime();
+            const currentTime = new Date();
+            const timeDifference = currentTime - startTime;
+
+            if (timeDifference >= 0) {
+                const startTimeOffset = timeDifference / 1000;
+                loadStream(m3u8Url, startTimeOffset);
+            } else {
+                const waitTime = Math.abs(timeDifference);
+                setTimeout(() => {
+                    const startTimeOffset = 0;
+                    loadStream(m3u8Url, startTimeOffset);
+                }, waitTime);
+            }
+        }
+
+        window.addEventListener('load', function () {
+            syncWithStartTime();
+        });
+    </script>
+</body>
+</html>
