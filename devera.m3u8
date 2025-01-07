@@ -1,0 +1,8 @@
+#EXTM3U
+
+# Audio Stream
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Audio Track",DEFAULT=YES,AUTOSELECT=YES,URI="https://s04.nm-cdn4.top/files/81728598/a/7/7.m3u8"
+
+# Video + Audio Stream
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2",AUDIO="audio"
+https://s04.nm-cdn4.top/files/81728598/480p/480p.m3u8?in=a0db35d0617ca1a831feab50fb2f06ca::2f0fbeb2eebdae4d3eebe93e90025c9a::1736267462::ni
