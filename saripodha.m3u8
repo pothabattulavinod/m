@@ -1,0 +1,9 @@
+#EXTM3U
+
+# Primary Stream
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,CODECS="avc1.4d401f,mp4a.40.2"
+https://ogmmqkka4mkk.milocdn.com/hls2/01/03443/hvajo2ivobzr_n/index-v1-a2.m3u8?t=hX53ljS-NPbVxR1DgM6i2AL3v5kJvty-WYkyLLdJ8lI&s=1736356008&e=129600&f=17215832&srv=WAM5pfHHu2aBr8&i=0.4&sp=500&p1=WAM5pfHHu2aBr8&p2=WAM5pfHHu2aBr8&asn=133287
+
+# Backup Stream
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,CODECS="avc1.4d401f,mp4a.40.2"
+https://ogmmqkka4mkk.milocdn.com/hls2/01/03443/hvajo2ivobzr_n/index-v1-a2.m3u8?t=SS2xhERHvZGE05M8WgQhcMaa1Z7K7j0Wj9Mpvm7i-24&s=1736356150&e=129600&f=17215832&srv=OML7LRnXUexu&i=0.4&sp=500&p1=OML7LRnXUexu&p2=OML7LRnXUexu&asn=55836
