@@ -1,0 +1,5 @@
+#EXTM3U
+
+# Primary Stream
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,CODECS="avc1.4d401f,mp4a.40.2"
+https://ft5gre.cfglobalcdn.com/silverlight/secip/189585/133287/kq2LeQMCzm-HJDjMMvORjA/MTYwLjIzOC43Mi4xODU=/1736373193/hls-vod-s004/flv/api/files/videos/2022/11/19/1668802816b5xg0.mp4.m3u8
