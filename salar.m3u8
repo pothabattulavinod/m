@@ -1,0 +1,17 @@
+#EXTM3U
+
+# Primary Stream 1
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,CODECS="avc1.4d401f,mp4a.40.2"
+https://r4eeg9mngv6q.acek-cdn.com/hls2/01/03223/cdc9mbxq78f6_n/index-v1-a1.m3u8?t=lSXPa19UuXh_hNTr4QmikrPYzJaHkM3j6ZvKmAKD6dw&s=1736350017&e=129600&f=16118520&srv=0g7xgsanrz08&i=0.4&sp=500&p1=0g7xgsanrz08&p2=0g7xgsanrz08&asn=133287
+
+# Backup Stream 1
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,CODECS="avc1.4d401f,mp4a.40.2"
+https://vpk1g9itdgtk.acek-cdn.com/hls2/01/03223/cdc9mbxq78f6_n/index-v1-a1.m3u8?t=gbF0EIDuIPUtfw0Re5Mm1V8Vzc_m7YGvJ5q1onmSj7k&s=1736349914&e=129600&f=16118520&srv=0g7xgsanrz08&i=0.4&sp=500&p1=0g7xgsanrz08&p2=0g7xgsanrz08&asn=55836
+
+# Primary Stream 2
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,CODECS="avc1.4d401f,mp4a.40.2"
+https://r4zh25wi4b.cdn-centaurus.com/hls2/01/07529/ezvc8r7pko73_n/index-v1-a1.m3u8?t=tgVn0sOiMdzLfTI3nqcGtdtmmgRW9dkxGf8id_oag2Q&s=1736349978&e=129600&f=37646869&srv=3FjgDmcnea8S35m&i=0.4&sp=500&p1=3FjgDmcnea8S35m&p2=3FjgDmcnea8S35m&asn=133287
+
+# Backup Stream 2
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,CODECS="avc1.4d401f,mp4a.40.2"
+https://a99wtmgqgife.premilkyway.com/hls2/01/07529/ezvc8r7pko73_n/index-v1-a1.m3u8?t=GImnWV48ARLS3iuF7xSi6LLX0pJKD9CIBhZ6spcb4ZY&s=1736349858&e=129600&f=37646869&srv=3FjgDmcnea8S35m&i=0.4&sp=500&p1=3FjgDmcnea8S35m&p2=3FjgDmcnea8S35m&asn=55836
