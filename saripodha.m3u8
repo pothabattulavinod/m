@@ -1,25 +1,9 @@
 #EXTM3U
 
-# 720p Stream
-#EXT-X-STREAM-INF:BANDWIDTH=1500000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2"
-https://ogmmqkka4mkk.milocdn.com/hls2/01/03443/hvajo2ivobzr_n/index-v1-a2.m3u8?t=hX53ljS-NPbVxR1DgM6i2AL3v5kJvty-WYkyLLdJ8lI&s=1736356008&e=129600&f=17215832&srv=WAM5pfHHu2aBr8&i=0.4&sp=500&p1=WAM5pfHHu2aBr8&p2=WAM5pfHHu2aBr8&asn=133287
+# Auto Resolution Stream 1
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,CODECS="avc1.4d401f,mp4a.40.2"
+https://ys0i6perdwyn.milocdn.com/hls2/01/03443/hvajo2ivobzr_n/index-v1-a2.m3u8?t=ybSxizTSczJ_siokLAp4sn1PNn_Sd25rvbxVUBw5c8k&s=1736356918&e=129600&f=17215832&srv=OML7LRnXUexu&i=0.4&sp=500&p1=OML7LRnXUexu&p2=OML7LRnXUexu&asn=55836
 
-# Backup 720p Stream
-#EXT-X-STREAM-INF:BANDWIDTH=1500000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2"
-https://ogmmqkka4mkk.milocdn.com/hls2/01/03443/hvajo2ivobzr_n/index-v1-a2.m3u8?t=SS2xhERHvZGE05M8WgQhcMaa1Z7K7j0Wj9Mpvm7i-24&s=1736356150&e=129600&f=17215832&srv=OML7LRnXUexu&i=0.4&sp=500&p1=OML7LRnXUexu&p2=OML7LRnXUexu&asn=55836
-
-# 480p Stream
-#EXT-X-STREAM-INF:BANDWIDTH=800000,RESOLUTION=854x480,CODECS="avc1.4d401f,mp4a.40.2"
-https://ogmmqkka4mkk.milocdn.com/hls2/01/03443/hvajo2ivobzr_n/index-v1-a2.m3u8?t=hX53ljS-NPbVxR1DgM6i2AL3v5kJvty-WYkyLLdJ8lI&s=1736356008&e=129600&f=17215832&srv=WAM5pfHHu2aBr8&i=0.4&sp=500&p1=WAM5pfHHu2aBr8&p2=WAM5pfHHu2aBr8&asn=133287
-
-# Backup 480p Stream
-#EXT-X-STREAM-INF:BANDWIDTH=800000,RESOLUTION=854x480,CODECS="avc1.4d401f,mp4a.40.2"
-https://ogmmqkka4mkk.milocdn.com/hls2/01/03443/hvajo2ivobzr_n/index-v1-a2.m3u8?t=SS2xhERHvZGE05M8WgQhcMaa1Z7K7j0Wj9Mpvm7i-24&s=1736356150&e=129600&f=17215832&srv=OML7LRnXUexu&i=0.4&sp=500&p1=OML7LRnXUexu&p2=OML7LRnXUexu&asn=55836
-
-# 360p Stream
-#EXT-X-STREAM-INF:BANDWIDTH=400000,RESOLUTION=640x360,CODECS="avc1.4d401e,mp4a.40.2"
-https://ogmmqkka4mkk.milocdn.com/hls2/01/03443/hvajo2ivobzr_n/index-v1-a2.m3u8?t=hX53ljS-NPbVxR1DgM6i2AL3v5kJvty-WYkyLLdJ8lI&s=1736356008&e=129600&f=17215832&srv=WAM5pfHHu2aBr8&i=0.4&sp=500&p1=WAM5pfHHu2aBr8&p2=WAM5pfHHu2aBr8&asn=133287
-
-# Backup 360p Stream
-#EXT-X-STREAM-INF:BANDWIDTH=400000,RESOLUTION=640x360,CODECS="avc1.4d401e,mp4a.40.2"
-https://ogmmqkka4mkk.milocdn.com/hls2/01/03443/hvajo2ivobzr_n/index-v1-a2.m3u8?t=SS2xhERHvZGE05M8WgQhcMaa1Z7K7j0Wj9Mpvm7i-24&s=1736356150&e=129600&f=17215832&srv=OML7LRnXUexu&i=0.4&sp=500&p1=OML7LRnXUexu&p2=OML7LRnXUexu&asn=55836
+# Auto Resolution Stream 2
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,CODECS="avc1.4d401f,mp4a.40.2"
+https://ogmmqkka4mkk.milocdn.com/hls2/01/03443/hvajo2ivobzr_n/index-v1-a2.m3u8?t=MdMCp1r-kDi1LQUZvuLhAB-7tIt9bnWWOmwJAm2HCO8&s=1736357136&e=129600&f=17215832&srv=OML7LRnXUexu&i=0.4&sp=500&p1=OML7LRnXUexu&p2=OML7LRnXUexu&asn=133287
