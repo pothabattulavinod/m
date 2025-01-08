@@ -1,9 +1,25 @@
 #EXTM3U
 
-# Primary Video Stream
-#EXT-X-STREAM-INF:CODES="avc1.4d401f,mp4a.40.2"
+# 720p Stream
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2"
 https://j3rmodimy1oj.acek-cdn.com/hls2/01/03039/6obw7yb53pig_n/index-v1-a1.m3u8?t=vrinjY2ezUCEvF45kldtdiv2joz3R7nZdbKoHRFrHtI&s=1736344293&e=129600&f=15197313&srv=yCdcGNsOcuCU&i=0.4&sp=500&p1=yCdcGNsOcuCU&p2=yCdcGNsOcuCU&asn=55836
 
-# Backup Video Stream
-#EXT-X-STREAM-INF:CODES="avc1.4d401f,mp4a.40.2"
+# Backup 720p Stream
+#EXT-X-STREAM-INF:BANDWIDTH=1500000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2"
 https://qdihmnfwepxni.acek-cdn.com/hls2/01/03039/6obw7yb53pig_n/index-v1-a1.m3u8?t=SvismrzSOtzH_Ef3lAUSEQ8B1L65Xue8MFQura9kK3U&s=1736347799&e=129600&f=15197313&srv=yCdcGNsOcuCU&i=0.4&sp=500&p1=yCdcGNsOcuCU&p2=yCdcGNsOcuCU&asn=133287
+
+# 480p Stream
+#EXT-X-STREAM-INF:BANDWIDTH=800000,RESOLUTION=854x480,CODECS="avc1.4d401f,mp4a.40.2"
+https://j3rmodimy1oj.acek-cdn.com/hls2/01/03039/6obw7yb53pig_n/index-v1-a2.m3u8?t=vrinjY2ezUCEvF45kldtdiv2joz3R7nZdbKoHRFrHtI&s=1736344293&e=129600&f=15197313&srv=yCdcGNsOcuCU&i=0.4&sp=500&p1=yCdcGNsOcuCU&p2=yCdcGNsOcuCU&asn=55836
+
+# Backup 480p Stream
+#EXT-X-STREAM-INF:BANDWIDTH=800000,RESOLUTION=854x480,CODECS="avc1.4d401f,mp4a.40.2"
+https://qdihmnfwepxni.acek-cdn.com/hls2/01/03039/6obw7yb53pig_n/index-v1-a2.m3u8?t=SvismrzSOtzH_Ef3lAUSEQ8B1L65Xue8MFQura9kK3U&s=1736347799&e=129600&f=15197313&srv=yCdcGNsOcuCU&i=0.4&sp=500&p1=yCdcGNsOcuCU&p2=yCdcGNsOcuCU&asn=133287
+
+# 360p Stream
+#EXT-X-STREAM-INF:BANDWIDTH=400000,RESOLUTION=640x360,CODECS="avc1.4d401e,mp4a.40.2"
+https://j3rmodimy1oj.acek-cdn.com/hls2/01/03039/6obw7yb53pig_n/index-v1-a3.m3u8?t=vrinjY2ezUCEvF45kldtdiv2joz3R7nZdbKoHRFrHtI&s=1736344293&e=129600&f=15197313&srv=yCdcGNsOcuCU&i=0.4&sp=500&p1=yCdcGNsOcuCU&p2=yCdcGNsOcuCU&asn=55836
+
+# Backup 360p Stream
+#EXT-X-STREAM-INF:BANDWIDTH=400000,RESOLUTION=640x360,CODECS="avc1.4d401e,mp4a.40.2"
+https://qdihmnfwepxni.acek-cdn.com/hls2/01/03039/6obw7yb53pig_n/index-v1-a3.m3u8?t=SvismrzSOtzH_Ef3lAUSEQ8B1L65Xue8MFQura9kK3U&s=1736347799&e=129600&f=15197313&srv=yCdcGNsOcuCU&i=0.4&sp=500&p1=yCdcGNsOcuCU&p2=yCdcGNsOcuCU&asn=133287
