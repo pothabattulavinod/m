@@ -1,0 +1,8 @@
+#EXTM3U
+
+# Primary Stream
+#EXT-X-STREAM-INF:CODECS="avc1.4d401f,mp4a.40.2"
+https://cy1pr8bvqdte.milocdn.com/hls2/01/03451/iexrsqzlmds5_n/index-v1-a1.m3u8?t=1yBypfxdKTIGbPS-2MgTlyXWwS_P15tLskrjE6qt80U&s=1736403693&e=129600&f=17255169&srv=iPalmlGc893C&i=0.4&sp=500&p1=iPalmlGc893C&p2=iPalmlGc893C&asn=55836
+
+# Backup Stream
+#EXT-X-STREAM-INF:CODECS="avc1.4d401f,mp4a.40.2"
