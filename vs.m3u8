@@ -1,13 +1,16 @@
 #EXTM3U
+#EXT-X-VERSION:3
 
 # Video 1
-#EXTINF:-1,Video 1
-https://togtbtzsk9xf.milocdn.com/hls2/01/03450/yw3b7gglzttb_n/index-v1-a1.m3u8?t=UlIugJNUwkggl193Yq07J1pepVevNXYBkN5qMBhTeQk&s=1736392183&e=129600&f=17253913&srv=cd7l2muFW8z0&i=0.4&sp=500&p1=cd7l2muFW8z0&p2=cd7l2muFW8z0&asn=133287
+#EXTINF:10.0, 
+https://togtbtzsk9xf.milocdn.com/hls2/01/03450/yw3b7gglzttb_n/index-v1-a1.m3u8
 
 # Video 2
-#EXTINF:-1,Video 2
-https://jns7boykmf9t.milocdn.com/hls2/01/03451/iexrsqzlmds5_n/index-v1-a1.m3u8?t=L1S21vpc665XGtHLmph4Ug2DCMN7-pxjuxERz2dkXM8&s=1736391973&e=129600&f=17255169&srv=iPalmlGc893C&i=0.4&sp=500&p1=iPalmlGc893C&p2=iPalmlGc893C&asn=133287
+#EXTINF:10.0, 
+https://jns7boykmf9t.milocdn.com/hls2/01/03451/iexrsqzlmds5_n/index-v1-a1.m3u8
 
 # Video 3
-#EXTINF:-1,Video 3
-https://g95mskivcjeu.milocdn.com/hls2/01/03451/06e9ie4sc8yu_n/index-v1-a1.m3u8?t=CFaBxBVHwzBV_nzeZylC5OGk0ipHx7_81fB8KCnUCNs&s=1736392248&e=129600&f=17255388&srv=bqycOuNuR1y4&i=0.4&sp=500&p1=bqycOuNuR1y4&p2=bqycOuNuR1y4&asn=133287
+#EXTINF:10.0, 
+https://g95mskivcjeu.milocdn.com/hls2/01/03451/06e9ie4sc8yu_n/index-v1-a1.m3u8
+
+#EXT-X-ENDLIST
