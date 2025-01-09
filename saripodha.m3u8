@@ -1,8 +1,8 @@
 #EXTM3U
+#EXT-X-VERSION:3
 
-# Primary Stream
-#EXT-X-STREAM-INF:CODECS="avc1.4d401f,mp4a.40.2"
+# Video 1 with Bandwidth
+#EXT-X-STREAM-INF:BANDWIDTH=1000000
 https://f9rw3r.cfglobalcdn.com/silverlight/secip/189585/133287/lZ8Tei2tMbXvvy783w_5vg/MTYwLjIzOC43Mi4xODU=/1736427116/hls-vod-s0013/flv/api/files/videos/2024/09/25/1727294406f2eu5.mp4.m3u8
-# Backup Stream
-#EXT-X-STREAM-INF:CODECS="avc1.4d401f,mp4a.40.2"
-https://f9rw3r.cfglobalcdn.com/silverlight/secip/189585/133287/lZ8Tei2tMbXvvy783w_5vg/MTYwLjIzOC43Mi4xODU=/1736427116/hls-vod-s0013/flv/api/files/videos/2024/09/25/1727294406f2eu5.mp4.m3u8
+
+#EXT-X-ENDLIST
