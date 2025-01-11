@@ -1,0 +1,13 @@
+#EXTM3U
+#EXT-X-STREAM-INF:NAME="Primary Source"
+https://gab0dp9jpu.cdn-centaurus.com/hls2/01/07885/k38ei249h0oc_o/index-v1-a1.m3u8?t=l-ySHLY2I_krQFn5GR_4IIyVWcjwke6zpWVEmB5Ex_c&s=1736497227&e=129600&f=39427266&srv=F4iSPEwPLFnr&i=0.4&sp=500&p1=F4iSPEwPLFnr&p2=F4iSPEwPLFnr&asn=133287
+
+#EXT-X-STREAM-INF:NAME="Backup Source 1"
+https://r4eeg9mngv6q.acek-cdn.com/hls2/01/03474/se7r1ym6arz4_n/index-v1-a1.m3u8?t=ogUWORIzv4dqal5JT8uJ9BfmbWiEGLhDk4Aq6uV75As&s=1736497251&e=129600&f=17374169&srv=0g7xgsanrz08&i=0.4&sp=500&p1=0g7xgsanrz08&p2=0g7xgsanrz08&asn=133287
+
+#EXT-X-STREAM-INF:NAME="Backup Source 2"
+https://gab0dp9jpu.cdn-centaurus.com/hls2/01/07885/k38ei249h0oc_o/index-v1-a1.m3u8?t=XlsjED7SsoRAWpRlC9KsesNTMMczfXPyThtqNCpsUJQ&s=1736497293&e=129600&f=39427266&srv=F4iSPEwPLFnr&i=0.4&sp=500&p1=F4iSPEwPLFnr&p2=F4iSPEwPLFnr&asn=55836
+
+#EXT-X-STREAM-INF:NAME="Backup Source 3"
+https://hi3thh5oxxww.acek-cdn.com/hls2/01/03474/se7r1ym6arz4_n/index-v1-a1.m3u8?t=JnzIHlPCLSRUAYcQLw2EemkV0JKziNiv1_zE7qcX77k&s=1736496969&e=129600&f=17374169&srv=0g7xgsanrz08&i=0.4&sp=500&p1=0g7xgsanrz08&p2=0g7xgsanrz08&asn=55836
+
