@@ -1,13 +1,17 @@
 #EXTM3U
-#EXT-X-STREAM-INF:NAME="Primary Source"
-https://gab0dp9jpu.cdn-centaurus.com/hls2/01/07885/k38ei249h0oc_o/index-v1-a1.m3u8?t=l-ySHLY2I_krQFn5GR_4IIyVWcjwke6zpWVEmB5Ex_c&s=1736497227&e=129600&f=39427266&srv=F4iSPEwPLFnr&i=0.4&sp=500&p1=F4iSPEwPLFnr&p2=F4iSPEwPLFnr&asn=133287
+#EXT-X-VERSION:3
 
-#EXT-X-STREAM-INF:NAME="Backup Source 1"
-https://r4eeg9mngv6q.acek-cdn.com/hls2/01/03474/se7r1ym6arz4_n/index-v1-a1.m3u8?t=ogUWORIzv4dqal5JT8uJ9BfmbWiEGLhDk4Aq6uV75As&s=1736497251&e=129600&f=17374169&srv=0g7xgsanrz08&i=0.4&sp=500&p1=0g7xgsanrz08&p2=0g7xgsanrz08&asn=133287
+#EXTINF:-1,Primary Stream
+https://dt53fg.cfglobalcdn.com/silverlight/secip/189585/133287/DOz7whKaFpV2xazTDBAOyQ/MTYwLjIzOC43Mi43MA==/1736671746/hls-vod-s003/flv/api/files/videos/2025/01/10/1736526285l795z.mp4.m3u8
 
-#EXT-X-STREAM-INF:NAME="Backup Source 2"
-https://gab0dp9jpu.cdn-centaurus.com/hls2/01/07885/k38ei249h0oc_o/index-v1-a1.m3u8?t=XlsjED7SsoRAWpRlC9KsesNTMMczfXPyThtqNCpsUJQ&s=1736497293&e=129600&f=39427266&srv=F4iSPEwPLFnr&i=0.4&sp=500&p1=F4iSPEwPLFnr&p2=F4iSPEwPLFnr&asn=55836
+#EXTINF:-1,Backup Stream 1
+https://vpk1g9itdgtk.acek-cdn.com/hls2/01/03481/t64ze2djv4gl_n/index-v1-a1.m3u8?t=V_KNv20q45p3VCj6rbCcohWB6VOLrN5SJ9x1JPAThII&s=1736647638&e=129600&f=17409268&srv=pgnp5flcy8ev&i=0.4&sp=500&p1=pgnp5flcy8ev&p2=pgnp5flcy8ev&asn=133287
 
-#EXT-X-STREAM-INF:NAME="Backup Source 3"
-https://hi3thh5oxxww.acek-cdn.com/hls2/01/03474/se7r1ym6arz4_n/index-v1-a1.m3u8?t=JnzIHlPCLSRUAYcQLw2EemkV0JKziNiv1_zE7qcX77k&s=1736496969&e=129600&f=17374169&srv=0g7xgsanrz08&i=0.4&sp=500&p1=0g7xgsanrz08&p2=0g7xgsanrz08&asn=55836
+#EXTINF:-1,Backup Stream 2
+https://pffwa2vimw.cdn-centaurus.com/hls2/01/07893/mlra3yd06qae_n/index-v1-a1.m3u8?t=gaSaRt8X0_7WBqAZOW7u_UXMeSp0IdbZjaeatRtrlR8&s=1736647690&e=129600&f=39465044&srv=3FjgDmcnea8S35m&i=0.4&sp=500&p1=3FjgDmcnea8S35m&p2=3FjgDmcnea8S35m&asn=133287
 
+#EXTINF:-1,Backup Stream 3
+https://vpk1g9itdgtk.acek-cdn.com/hls2/01/03481/t64ze2djv4gl_n/index-v1-a1.m3u8?t=phoxJWtt5CL2kFADGOzZ8LlrAEwLHHXe3cqJ6oSApjc&s=1736647743&e=129600&f=17409268&srv=pgnp5flcy8ev&i=0.4&sp=500&p1=pgnp5flcy8ev&p2=pgnp5flcy8ev&asn=55836
+
+#EXTINF:-1,Backup Stream 4
+https://wnsa7jyhmnmt12.premilkyway.com/hls2/01/07893/mlra3yd06qae_n/index-v1-a1.m3u8?t=E8Ik6LRPcVZ68ohb7bNlCxbYykZ9oB2QiRpEpJPJRnU&s=1736647719&e=129600&f=39465044&srv=3FjgDmcnea8S35m&i=0.4&sp=500&p1=3FjgDmcnea8S35m&p2=3FjgDmcnea8S35m&asn=55836
