@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Stream Selector</title>
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+  <video id="video" controls autoplay width="640" height="360"></video>
+
+  <script>
+    const video = document.getElementById('video');
+    const sources = [
+      "https://dt53fg.cfglobalcdn.com/silverlight/secip/189585/133287/DOz7whKaFpV2xazTDBAOyQ/MTYwLjIzOC43Mi43MA==/1736671746/hls-vod-s003/flv/api/files/videos/2025/01/10/1736526285l795z.mp4.m3u8",
+      "https://vpk1g9itdgtk.acek-cdn.com/hls2/01/03481/t64ze2djv4gl_n/index-v1-a1.m3u8?t=V_KNv20q45p3VCj6rbCcohWB6VOLrN5SJ9x1JPAThII&s=1736647638&e=129600&f=17409268&srv=pgnp5flcy8ev&i=0.4&sp=500&p1=pgnp5flcy8ev&p2=pgnp5flcy8ev&asn=133287",
+      "https://pffwa2vimw.cdn-centaurus.com/hls2/01/07893/mlra3yd06qae_n/index-v1-a1.m3u8?t=gaSaRt8X0_7WBqAZOW7u_UXMeSp0IdbZjaeatRtrlR8&s=1736647690&e=129600&f=39465044&srv=3FjgDmcnea8S35m&i=0.4&sp=500&p1=3FjgDmcnea8S35m&p2=3FjgDmcnea8S35m&asn=133287",
+      "https://vpk1g9itdgtk.acek-cdn.com/hls2/01/03481/t64ze2djv4gl_n/index-v1-a1.m3u8?t=phoxJWtt5CL2kFADGOzZ8LlrAEwLHHXe3cqJ6oSApjc&s=1736647743&e=129600&f=17409268&srv=pgnp5flcy8ev&i=0.4&sp=500&p1=pgnp5flcy8ev&p2=pgnp5flcy8ev&asn=55836",
+      "https://wnsa7jyhmnmt12.premilkyway.com/hls2/01/07893/mlra3yd06qae_n/index-v1-a1.m3u8?t=E8Ik6LRPcVZ68ohb7bNlCxbYykZ9oB2QiRpEpJPJRnU&s=1736647719&e=129600&f=39465044&srv=3FjgDmcnea8S35m&i=0.4&sp=500&p1=3FjgDmcnea8S35m&p2=3FjgDmcnea8S35m&asn=55836"
+    ];
+
+    const randomSource = sources[Math.floor(Math.random() * sources.length)];
+
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(randomSource);
+      hls.attachMedia(video);
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = randomSource;
+    }
+  </script>
+</body>
+</html>
