@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qodegen TV</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            max-width: 900px;
+            aspect-ratio: 16 / 9;
+            margin: 20px auto;
+            position: relative;
+            background-color: black;
+            border: 3px solid #444;
+            border-radius: 8px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            background-color: #000;
+            pointer-events: none;
+        }
+
+        #info-bar {
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #222;
+            padding: 10px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 5px;
+        }
+
+        #fullscreen-btn, #refresh-btn {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #fullscreen-btn:hover, #refresh-btn:hover {
+            background-color: #666;
+        }
+
+        #button-container {
+            margin-top: 20px;
+        }
+
+        #loading-indicator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 16px;
+            display: none;
+        }
+
+        #video-container.fullscreen {
+            border: none;
+        }
+
+        #watermark {
+            position: absolute;
+            left: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            display: none;
+            z-index: 10;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+    <h1>Qodegen TV</h1>
+    <div id="video-container">
+        <video id="video" autoplay playsinline></video>
+        <div id="loading-indicator">Loading...</div>
+        <div id="watermark">QODEGEN TV</div>
+    </div>
+    <div id="info-bar">Now Playing: -</div>
+    <div id="button-container">
+        <button id="fullscreen-btn">Go Fullscreen</button>
+        <button id="refresh-btn">Refresh</button>
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        const fullscreenBtn = document.getElementById('fullscreen-btn');
+        const refreshBtn = document.getElementById('refresh-btn');
+        const infoBar = document.getElementById('info-bar');
+        const videoContainer = document.getElementById('video-container');
+        const watermark = document.getElementById('watermark');
+        const loadingIndicator = document.getElementById('loading-indicator');
+
+        const streams = [
+            {
+                url: [
+                    'https://vpk1g9itdgtk.acek-cdn.com/hls2/01/03481/t64ze2djv4gl_n/index-v1-a1.m3u8?t=V_KNv20q45p3VCj6rbCcohWB6VOLrN5SJ9x1JPAThII&s=1736647638&e=129600&f=17409268&srv=pgnp5flcy8ev&i=0.4&sp=500&p1=pgnp5flcy8ev&p2=pgnp5flcy8ev&asn=133287',
+                    'https://pffwa2vimw.cdn-centaurus.com/hls2/01/07893/mlra3yd06qae_n/index-v1-a1.m3u8?t=gaSaRt8X0_7WBqAZOW7u_UXMeSp0IdbZjaeatRtrlR8&s=1736647690&e=129600&f=39465044&srv=3FjgDmcnea8S35m&i=0.4&sp=500&p1=3FjgDmcnea8S35m&p2=3FjgDmcnea8S35m&asn=133287',
+                    'https://vpk1g9itdgtk.acek-cdn.com/hls2/01/03481/t64ze2djv4gl_n/index-v1-a1.m3u8?t=phoxJWtt5CL2kFADGOzZ8LlrAEwLHHXe3cqJ6oSApjc&s=1736647743&e=129600&f=17409268&srv=pgnp5flcy8ev&i=0.4&sp=500&p1=pgnp5flcy8ev&p2=pgnp5flcy8ev&asn=55836',
+                    'https://wnsa7jyhmnmt12.premilkyway.com/hls2/01/07893/mlra3yd06qae_n/index-v1-a1.m3u8?t=E8Ik6LRPcVZ68ohb7bNlCxbYykZ9oB2QiRpEpJPJRnU&s=1736647719&e=129600&f=39465044&srv=3FjgDmcnea8S35m&i=0.4&sp=500&p1=3FjgDmcnea8S35m&p2=3FjgDmcnea8S35m&asn=55836'
+                ],
+                title: 'DASARA',
+                startTime: new Date().setHours(8, 59, 0, 0),
+                endTime: new Date().setHours(11, 29, 0, 0)
+            },
+            // Other stream entries...
+        ];
+        let currentStreamIndex = 0;
+
+        function showLoading() {
+            loadingIndicator.style.display = 'block';
+        }
+
+        function hideLoading() {
+            loadingIndicator.style.display = 'none';
+        }
+
+        function loadStream(offsetSeconds = 0) {
+            showLoading();
+            const stream = streams[currentStreamIndex];
+            const urls = Array.isArray(stream.url) ? stream.url : [stream.url];
+            let urlIndex = 0;
+
+            function tryNextUrl() {
+                if (urlIndex >= urls.length) {
+                    infoBar.textContent = `Failed to load: ${stream.title}`;
+                    hideLoading();
+                    return;
+                }
+
+                const currentUrl = urls[urlIndex];
+                if (Hls.isSupported()) {
+                    const hls = new Hls();
+                    hls.loadSource(currentUrl);
+                    hls.attachMedia(video);
+                    hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                        video.currentTime = offsetSeconds;
+                        video.play();
+                        infoBar.textContent = `Now Playing: ${stream.title}`;
+                        hideLoading();
+                    });
+                    hls.on(Hls.Events.ERROR, () => {
+                        urlIndex++;
+                        tryNextUrl();
+                    });
+                } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                    video.src = currentUrl;
+                    video.currentTime = offsetSeconds;
+                    video.load();
+                    video.play();
+                    infoBar.textContent = `Now Playing: ${stream.title}`;
+                    hideLoading();
+                } else {
+                    urlIndex++;
+                    tryNextUrl();
+                }
+            }
+
+            tryNextUrl();
+        }
+
+        function syncWithTime() {
+            const now = new Date();
+            const stream = streams[currentStreamIndex];
+
+            if (now >= stream.endTime) {
+                playNextStream();
+            } else if (now >= stream.startTime) {
+                const offset = Math.max((now - stream.startTime) / 1000, 0);
+                loadStream(offset);
+            } else {
+                setTimeout(syncWithTime, stream.startTime - now);
+            }
+        }
+
+        function playNextStream() {
+            if (currentStreamIndex < streams.length - 1) {
+                currentStreamIndex++;
+                syncWithTime();
+            } else {
+                infoBar.textContent = 'No more streams available.';
+            }
+        }
+
+        fullscreenBtn.addEventListener('click', () => {
+            videoContainer.requestFullscreen().then(() => {
+                videoContainer.classList.add('fullscreen');
+                watermark.style.display = 'block';
+            });
+        });
+
+        refreshBtn.addEventListener('click', () => {
+            syncWithTime();
+        });
+
+        window.addEventListener('load', () => {
+            syncWithTime();
+        });
+    </script>
+</body>
+</html>
