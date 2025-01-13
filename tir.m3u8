@@ -1,9 +1,20 @@
 #EXTM3U
-
-# Audio Stream
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Audio Track",DEFAULT=YES,AUTOSELECT=YES,URI="https://s11.nm-cdn2.top/files/0I2GBIKQO2ZLMANHI6KIKPQAF6/a/4/4.m3u8"
-
-# Video + Audio Stream
-#EXT-X-STREAM-INF:BANDWIDTH=1500000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2",AUDIO="audio"
-https://s11.nm-cdn2.top/files/0I2GBIKQO2ZLMANHI6KIKPQAF6/480p/480p.m3u8?in=a0db35d0617ca1a831feab50fb2f06ca::844a2c5ebfde8fe2a7af7a467c852bc3::1736269086::ni
-
+#EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:10
+#EXT-X-MEDIA-SEQUENCE:0
+#EXTINF:10.0,
+https://drive.google.com/uc?id=1UoOQJGI1lGpg4DT-jjSwx7kjk8yT_Qsc&export=download&?.ts
+#EXTINF:10.0,
+https://drive.google.com/uc?id=1-4-LmVEqjumhgmYsvO8r2sofVMtXm4TJ&export=download&?.ts
+#EXTINF:10.0,
+https://drive.google.com/uc?id=1--GC-XFvIq6KFS5Ag5qOL_bFbEd_tiab&export=download&?.ts
+#EXTINF:10.0,
+https://drive.google.com/uc?id=1-CUY3I546y2BI99ictvT8LihptjrjqLd&export=download&?.ts
+#EXTINF:10.0,
+https://drive.google.com/uc?id=1-Ezy2GNu-n9vyDIIuykqMYZwepJ4N6Ir&export=download&?.ts
+#EXTINF:10.0,
+https://drive.google.com/uc?id=1-MjUT0rQHeJxVcRIFyPm1igm2iHpuMbJ&export=download&?.ts
+#EXTINF:10.0,
+https://drive.google.com/uc?id=1-P9UPknFwUveQdrlcY0dERy_cymDLsl3&export=download&?.ts
+#EXTINF:10.0,
+https://drive.google.com/uc?id=1-f_setOUH_d0nP46J8Jc7e3GDwmDSCrT&export=download&?.ts
